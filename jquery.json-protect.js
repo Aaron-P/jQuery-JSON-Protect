@@ -2,13 +2,10 @@
 /*
 test methods to stop execution:
 
-
 any illegal characters
 throw <anything that isnt nothing>;
 throw("your message here");
 throw false; = throw""; = throw(""); = throw 0; = throw(0); = throw(null); = throw(undefined);//no exception message but stops execution
-
-
 
 throw 1;
 for(;;);
@@ -25,7 +22,7 @@ while(1);
 		return;
 	$.jsonProtect = true;
 
-	$.fn.jsonProtect = function
+//	$.fn.jsonProtect = function
 
 	//Would it be better to do this using converters instead of dataFilter?
 	//Setting another dataFilter kills this one.
