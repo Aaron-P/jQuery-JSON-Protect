@@ -30,7 +30,8 @@ while(1);
 	$.ajaxSetup({
 		dataFilter: function(data, type)
 		{
-			if (type === "json" || type === "jsonp")
+			type = type.toUpperCase();
+			if (type === "JSON")
 				return data.replace(/^\s*(?:\/{2,}|(?:while\s*\(\s*(?:1|true)\s*\)|for\s*\(\s*;\s*;\s*\)|throw\s*[^;])\s*;)/g, "").trim();
 			return data;
 		}
